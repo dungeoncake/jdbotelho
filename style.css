@@ -1,0 +1,336 @@
+/* --------------------------------------------------
+   GLOBAL RESET & BASE
+-------------------------------------------------- */
+
+html, body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Georgia", serif;
+  background-color: rgb(238, 238, 237);
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------------------------
+   TYPOGRAPHY
+-------------------------------------------------- */
+
+h1, nav, footer, .collapsible, ul li a {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 400;
+  color: rgb(128, 127, 127);
+  padding: 5px;
+  width: 100%;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+h2 {
+  font-weight: 400;
+  color: rgb(128, 127, 127);
+  margin-top: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+
+/* --------------------------------------------------
+   HEADER
+-------------------------------------------------- */
+
+header {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+}
+
+hr {
+  width: 30vw;
+}
+
+
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.collapsible {
+  background-color: #808080;
+  color: #c6fce5;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 1rem;
+}
+
+.active, .collapsible:hover {
+  background-color: #B4B4B4;
+}
+
+.content {
+  padding: 0 18px;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  background-color: #B4B4B4;
+  color: white;
+  transition: max-height 0.2s ease-out;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+ul {
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 10vw;
+}
+
+button {
+  margin: 0;
+  width: 50vw;
+}
+
+
+/* --------------------------------------------------
+   GALLERY GRID
+-------------------------------------------------- */
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 10px 20px 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.row img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.2s;
+  cursor: pointer;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.row img:hover {
+  transform: scale(1.03);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+/* --------------------------------------------------
+   MODAL / LIGHTBOX
+-------------------------------------------------- */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #808080;
+}
+
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* FIXED ARROW ALIGNMENT */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.modal .prev,
+.modal .next {
+  display: none;
+}
+
+.modal.active .prev,
+.modal.active .next {
+  display: block;
+}
+
+
+/* --------------------------------------------------
+   ARTICLE SECTIONS (ABOUT + CONTACT)
+-------------------------------------------------- */
+
+article {
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 25px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  color: #444;
+  background: #f7f7f7;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+article p {
+  margin-bottom: 1.2rem;
+}
+
+/* CONTACT INFO BLOCK */
+.contact-info {
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.contact-info a {
+  margin: 0 5px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+  border-top: 1px solid #dcdcdc;
+  margin-top: 40px;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #000;
+}
+
+
+/* --------------------------------------------------
+   MOBILE IMPROVEMENTS
+-------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .collapsible {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+}
