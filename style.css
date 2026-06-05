@@ -184,13 +184,13 @@ button {
   overflow: hidden;
 }
 
-
 .modal-content {
   position: relative;
-  margin: auto;
+  margin: 0;              
   padding: 0;
   width: 90%;
   max-width: 1200px;
+  height: 100%;           
   display: flex;
   justify-content: center;
   align-items: center;
@@ -198,9 +198,9 @@ button {
 
 .modal-content img {
   display: block;
-  margin: 0 auto;
+  margin: 0;
   max-width: 90vw;
-  max-height: 85vh;
+  max-height: 100vh;      
   object-fit: contain;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
