@@ -186,11 +186,10 @@ button {
 
 .modal-content {
   position: relative;
-  margin: 0;              
+  margin: 0 auto;      /* center horizontally inside modal */
   padding: 0;
   width: 90%;
   max-width: 1200px;
-  height: 100%;           
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,7 +199,7 @@ button {
   display: block;
   margin: 0;
   max-width: 90vw;
-  max-height: 100vh;      
+  max-height: 100vh;   /* keeps mobile from pinning to top */
   object-fit: contain;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
