@@ -7,13 +7,11 @@
   <title>Photography</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 
-  <!-- SEO -->
   <meta name="description" content="Toronto photographer John D. Botelho — clean, expressive photography across sports, events, studio, and creative work. View portfolio and contact for bookings.">
   <meta name="keywords" content="Toronto photographer, photography portfolio, event photography, studio photography, sports photography, creative photographer">
   <meta name="geo.region" content="CA-ON">
   <meta name="geo.placename" content="Toronto">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="John D. Botelho — Toronto Photographer">
   <meta property="og:description" content="Clean, expressive photography across sports, events, studio, and creative work.">
   <meta property="og:image" content="beach.webp">
@@ -31,32 +29,29 @@
     <div class="content">
       <ul>
         <li><a href="about.html">About</a></li>
-        <!--<li><a href="services.html">Services</a></li>-->
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <main class="row">
-    <img src="beach.webp" loading="lazy" onclick="openModal();currentSlide(1)" class="zoom landscape" alt="Beach at sunset">
-    <img src="tree.webp" loading="lazy" onclick="openModal();currentSlide(2)" class="zoom portrait" alt="Tree silhouette with dramatic lighting">
-    <img src="district.webp" loading="lazy" onclick="openModal();currentSlide(3)" class="zoom landscape" alt="Urban district street scene">
-    <img src="eds.webp" loading="lazy" onclick="openModal();currentSlide(4)" class="zoom portrait" alt="Portrait with dramatic lighting">
-    <img src="cans.webp" loading="lazy" onclick="openModal();currentSlide(5)" class="zoom landscape" alt="Artistic composition with cans">
-    <img src="freeze.webp" loading="lazy" onclick="openModal();currentSlide(6)" class="zoom portrait" alt="Frozen moment action shot">
-    <img src="sbg.webp" loading="lazy" onclick="openModal();currentSlide(7)" class="zoom landscape" alt="Street scene with bold geometry">
-    <img src="scarweb.webp" loading="lazy" onclick="openModal();currentSlide(8)" class="zoom portrait" alt="Portrait with scarf and texture">
-    <img src="jelly.webp" loading="lazy" onclick="openModal();currentSlide(9)" class="zoom landscape" alt="Jellyfish underwater shot">
-    <img src="citystroll.webp" loading="lazy" onclick="openModal();currentSlide(10)" class="zoom portrait" alt="City stroll candid moment">
-    <img src="eggs.webp" loading="lazy" onclick="openModal();currentSlide(11)" class="zoom landscape" alt="Still life with eggs">
+    <img src="beach.webp" loading="lazy" onclick="openModal();currentSlide(1)" alt="Beach at sunset">
+    <img src="tree.webp" loading="lazy" onclick="openModal();currentSlide(2)" alt="Tree silhouette with dramatic lighting">
+    <img src="district.webp" loading="lazy" onclick="openModal();currentSlide(3)" alt="Urban district street scene">
+    <img src="eds.webp" loading="lazy" onclick="openModal();currentSlide(4)" alt="Portrait with dramatic lighting">
+    <img src="cans.webp" loading="lazy" onclick="openModal();currentSlide(5)" alt="Artistic composition with cans">
+    <img src="freeze.webp" loading="lazy" onclick="openModal();currentSlide(6)" alt="Frozen moment action shot">
+    <img src="sbg.webp" loading="lazy" onclick="openModal();currentSlide(7)" alt="Street scene with bold geometry">
+    <img src="scarweb.webp" loading="lazy" onclick="openModal();currentSlide(8)" alt="Portrait with scarf and texture">
+    <img src="jelly.webp" loading="lazy" onclick="openModal();currentSlide(9)" alt="Jellyfish underwater shot">
+    <img src="citystroll.webp" loading="lazy" onclick="openModal();currentSlide(10)" alt="City stroll candid moment">
+    <img src="eggs.webp" loading="lazy" onclick="openModal();currentSlide(11)" alt="Still life with eggs">
   </main>
 
-  <!-- Modal -->
   <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()">&times;</span>
 
     <div class="modal-content">
-
       <div class="mySlides"><div class="numbertext">1 / 11</div><img src="beach.webp" loading="lazy" alt="Beach at sunset"></div>
       <div class="mySlides"><div class="numbertext">2 / 11</div><img src="tree.webp" loading="lazy" alt="Tree silhouette"></div>
       <div class="mySlides"><div class="numbertext">3 / 11</div><img src="district.webp" loading="lazy" alt="Urban district"></div>
@@ -68,10 +63,10 @@
       <div class="mySlides"><div class="numbertext">9 / 11</div><img src="jelly.webp" loading="lazy" alt="Jellyfish underwater"></div>
       <div class="mySlides"><div class="numbertext">10 / 11</div><img src="citystroll.webp" loading="lazy" alt="City stroll"></div>
       <div class="mySlides"><div class="numbertext">11 / 11</div><img src="eggs.webp" loading="lazy" alt="Still life eggs"></div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
 
   <hr>
@@ -81,6 +76,6 @@
     <p>Toronto, Ontario</p>
   </footer>
 
-  <script type="text/javascript" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
