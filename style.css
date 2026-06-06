@@ -185,7 +185,7 @@ button {
 
 .modal-content {
   position: relative;
-  margin: 0 auto;      /* center horizontally inside modal */
+  margin: 0 auto;
   padding: 0;
   width: 90%;
   max-width: 1200px;
@@ -198,7 +198,7 @@ button {
   display: block;
   margin: 0;
   max-width: 90vw;
-  max-height: 100vh;   /* keeps mobile from pinning to top */
+  max-height: 100vh;
   object-fit: contain;
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
@@ -222,19 +222,22 @@ button {
   display: none;
 }
 
-/* FIXED ARROW ALIGNMENT */
+
+/* --------------------------------------------------
+   ARROWS BELOW IMAGE
+-------------------------------------------------- */
+
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 16px;
+  bottom: 20px;
+  padding: 12px 18px;
+  font-size: 22px;
   color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
+  cursor: pointer;
   user-select: none;
+  background: rgba(0,0,0,0.4);
+  border-radius: 4px;
 }
 
 .prev { left: 20px; }
@@ -242,15 +245,7 @@ button {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+  background: rgba(0,0,0,0.7);
 }
 
 .modal .prev,
@@ -263,9 +258,17 @@ button {
   display: block;
 }
 
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
 
 /* --------------------------------------------------
-   ARTICLE SECTIONS (ABOUT + CONTACT)
+   ARTICLE SECTIONS
 -------------------------------------------------- */
 
 article {
@@ -284,7 +287,6 @@ article p {
   margin-bottom: 1.2rem;
 }
 
-/* CONTACT INFO BLOCK */
 .contact-info {
   text-align: center;
   line-height: 1.8;
@@ -325,7 +327,7 @@ footer a:hover {
 
 
 /* --------------------------------------------------
-   MOBILE IMPROVEMENTS
+   MOBILE
 -------------------------------------------------- */
 
 @media (max-width: 700px) {
